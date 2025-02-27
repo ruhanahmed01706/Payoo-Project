@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+    <!-- Dasy UI link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.8/daisyui.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-800">
+    <main class="min-h-screen max-w-md bg-slate-200 mx-auto">
+
+        <header class="bg-white py-6 rounded-b-2xl">
+            <nav class="flex justify-between items-center px-10">
+                <div class="flex justify-center items-center">
+                    <img class="w-16" src="assets/Group.png" alt="">
+                    <div class="mt-4">
+                        <h2 class="font-bold text-2xl">$ <span id="main-balance">45000</span></h2>
+                        <p class="">Available Balance</p>
+                    </div>
+                </div>
+                <div>
+                    <button class="btn btn-warning">Log Out</button>
+                </div>
+            </nav>
+        
+            <section class="mt-10">
+                <div class="px-5">
+                    <h1 class="font-bold text-2xl mb-2">🔥 Welcome to Payooo!</h1>
+                    <p>Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
+                </div>
+
+                <div class="mt-10 grid grid-cols-3 gap-2 px-2 cursor-pointer">
+
+                    <div id="add-money-btn" class="border p-4 rounded-lg text-center">
+                        <img class="w-8 mx-auto mb-1" src="assets/wallet1.png" alt="">
+                        <h3 class="">Add Money</h3>
+                    </div>
+
+                    <div id="cashout-btn" class="border p-4 rounded-lg text-center">
+                        <img class="w-8 mx-auto mb-1" src="assets/money1.png" alt="">
+                        <h3 class="">Cash Out</h3>
+                    </div>
+
+                    <div class="border p-4 rounded-lg text-center">
+                        <img class="w-8 mx-auto mb-1" src="assets/bonus1.png" alt="">
+                        <h3 class="">Transfer Money</h3>
+                    </div>
+
+                    <div class="border p-4 rounded-lg text-center">
+                        <img class="w-8 mx-auto mb-1" src="assets/send1.png" alt="">
+                        <h3 class="">Get Bonus</h3>
+                    </div>
+
+                    <div class="border p-4 rounded-lg text-center">
+                        <img class="w-8 mx-auto mb-1" src="assets/purse1.png" alt="">
+                        <h3 class="">Pay Bill</h3>
+                    </div>
+
+                    <div class="border p-4 rounded-lg text-center">
+                        <img class="w-8 mx-auto mb-1" src="assets/transaction1.png" alt="">
+                        <h3 class="">Transactions</h3>
+                    </div>
+                </div>
+            </section>
+        </header>
+
+        <section id="add-money-sec" class="mt-10">
+
+            <h1 class="font-bold text-2xl text-center mb-5">Add Money</h1>
+            <div class="">
+                <div class="hero-content flex-col lg:flex-row-reverse">
+                  
+                  <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                    <form class="card-body">
+
+                        <label class="form-control w-full max-w-xs">
+                            <div class="label">
+                              <span class="label-text font-bold ">Select A Bank</span>
+                              
+                            </div>
+                            <select class="select rounded-2xl bg-gray-300">
+                              <option disabled selected>Select Bank</option>
+                              <option value="Bikash">Bikash</option>
+                              <option value="Nagad">Nagad</option>
+                              <option value="Rocket">Rocket</option>
+                              <option value="DBBL">DBBL</option>
+                            </select>
+                          </label>
+
+
+                      <div class="form-control">
+                        <label class="label">
+                          <span class="label-text font-bold">Bank Account Number</span>
+                        </label>
+                        <input id="text-bank-number" type="number" placeholder="Enter 11 digit account number" class="input input-bordered rounded-2xl bg-gray-300" required />
+                      </div>
+                      <div class="form-control">
+                        <label class="label">
+                          <span class="label-text font-bold">Amount to Add</span>
+                        </label>
+                        <input id="amount" type="number" placeholder="Add Amount to withdraw" class="input input-bordered rounded-2xl bg-gray-300" required />
+                      </div>
+                      <div class="form-control">
+                        <label class="label">
+                          <span class="label-text font-bold">Pin Number</span>
+                        </label>
+                        <input id="pin" type="number" placeholder="Enter 4 Digit Pin Number" class="input input-bordered rounded-2xl bg-gray-300" required />
+                      </div>
+                      <div class="form-control mt-6">
+                        <button id="addMoney-btn" class="btn btn-primary w-full rounded-2xl">Add Money</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div> <!-- hero end-->
+        </section>
+
+
+        <section id="cashout-sec" class="mt-10">
+            <h1 class="font-bold text-2xl text-center mb-5">Cash Out</h1>
+            <div class="">
+                <div class="hero-content flex-col lg:flex-row-reverse">
+                  
+                  <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                    <form class="card-body">
+
+
+                      <div class="form-control">
+                        <label class="label">
+                          <span class="label-text font-bold">Bank Account Number</span>
+                        </label>
+                        <input id="text-cashout-number" type="number" placeholder="Enter 11 digit account number" class="input input-bordered rounded-2xl bg-gray-300" required />
+                      </div>
+                      <div class="form-control">
+                        <label class="label">
+                          <span class="label-text font-bold">Amount to Add</span>
+                        </label>
+                        <input id="cashout-amount" type="number" placeholder="Add Amount to withdraw" class="input input-bordered rounded-2xl bg-gray-300" required />
+                      </div>
+                      <div class="form-control">
+                        <label class="label">
+                          <span class="label-text font-bold">Pin Number</span>
+                        </label>
+                        <input id="cashout-pin" type="number" placeholder="Enter 4 Digit Pin Number" class="input input-bordered rounded-2xl bg-gray-300" required />
+                      </div>
+                      <div class="form-control mt-6">
+                        <button id="cash-Out-btn" class="btn btn-primary w-full rounded-2xl">Cash Out</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div> <!-- hero end-->
+        </section>
+    </main>
+    <script src="script/toggle.js"></script>
+    <script src="script/cashout.js"></script>
+    <script src="script/addMony.js"></script>
+</body>
+</html>

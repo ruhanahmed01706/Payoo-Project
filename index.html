@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Dasy UI link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.8/daisyui.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-slate-800">
+    <section class="max-w-md min-h-screen mx-auto py-6 bg-gray-200">
+        <header>
+            <nav class="flex justify-center items-center pt-20">
+                <div class="flex justify-center items-center w-3/8 mb-10 mt-10 relative">
+                    <img class="w-48 absolute" src="assets/bg.png" alt="">
+                    <img class="w-16" src="assets/Group.png" alt="">
+                </div>
+            </nav>
+            <!-- form start -->
+            <div class="hero min-h-screen pb-40 sm:pl-0">
+                <div class="hero-content flex-col lg:flex-row-reverse">
+                  
+                  <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                    <form class="card-body">
+                      <div class="form-control">
+                        <label class="label">
+                          <span class="label-text font-bold">Mobile Number</span>
+                        </label>
+                        <input value="01301301302" id="text-number" type="number" placeholder="Enter Your Number" class="input input-bordered bg-neutral-400 rounded-2xl" required />
+                      </div>
+                      <div class="form-control">
+                        <label class="label">
+                          <span class="label-text font-bold">4 Digit Pin</span>
+                        </label>
+                        <input value="1234" id="pin" type="text" placeholder="Enter 4 digit pin" class="input input-bordered  bg-neutral-400 rounded-2xl" required />
+                        
+                      </div>
+                      <div class="form-control mt-6">
+                        <button id="login-btn" class="btn btn-primary w-full rounded-2xl">Login</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            <!-- form end -->
+        </header>
+    </section>
+
+    <script src="script/login.js"></script>
+</body>
+</html>
