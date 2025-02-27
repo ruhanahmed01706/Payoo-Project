@@ -1,4 +1,9 @@
 
+document.getElementById('logout-btn').addEventListener('click',function(){
+    window.location.href="./index.html"
+})
+
+
 document.getElementById('cashout-sec').style.display ='none';
 
 document.getElementById('add-money-btn').addEventListener('click',function(){
