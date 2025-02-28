@@ -12,11 +12,25 @@ document.getElementById('cash-Out-btn').addEventListener('click',function(event)
 
     const textCashoutNumber = document.getElementById('text-cashout-number').value;
 
+    if(convertedMainBalance < convertedCashoutAmount){
+        alert('Your Balance Is Not Available')
+        return;
+    }
+
     if(textCashoutNumber.length === 11){
         if(convertedCashoutPin === 1234){
 
             const sum = convertedMainBalance - convertedCashoutAmount;
             const mainBalance = document.getElementById('main-balance').innerText = sum;
+
+            const container = document.getElementById('transaction-sec');
+
+            const p = document.createElement('p');
+            p.innerText = `
+            CashOut ${convertedCashoutAmount} form this ${textCashoutNumber} Account.
+            `
+            container.appendChild(p)
+            
 
         }
         else{
