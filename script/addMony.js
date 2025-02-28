@@ -10,6 +10,9 @@ document.getElementById('addMoney-btn').addEventListener('click',function(event)
     const mainBalance = document.getElementById('main-balance').innerText;
     const convertedMainBalance = parseFloat(mainBalance);
 
+    const selectBank = document.getElementById('select-bank').value;
+    console.log(selectBank);
+    
     const textBankNumber = document.getElementById('text-bank-number').value;
 
     if(convertedAmount < 0){
@@ -25,11 +28,16 @@ document.getElementById('addMoney-btn').addEventListener('click',function(event)
 
             const container = document.getElementById('transaction-sec');
 
-            const p = document.createElement('p');
-            p.innerText = `
-            Added ${convertedAmount} form ${textBankNumber} Account.
+            const div = document.createElement('div');
+            // div.classList.add("bg-gray-200 p-2 m-2")
+            div.innerHTML = `
+            <h1>Added Money Form ${selectBank} </h1>
+            <h3> Ammount: ${convertedAmount} </h3
+            <p> Account No: ${textBankNumber} </h3>
+
             `
-            container.appendChild(p);
+            
+            container.appendChild(div);
         }
         else{
             alert('Pin Wrong');

@@ -10,6 +10,8 @@ document.getElementById('cash-Out-btn').addEventListener('click',function(event)
     const mainBalance = document.getElementById('main-balance').innerText;
     const convertedMainBalance = parseFloat(mainBalance);
 
+    const selectBank = document.getElementById('select-bank').value;
+
     const textCashoutNumber = document.getElementById('text-cashout-number').value;
 
     if(convertedMainBalance < convertedCashoutAmount){
@@ -24,12 +26,19 @@ document.getElementById('cash-Out-btn').addEventListener('click',function(event)
             const mainBalance = document.getElementById('main-balance').innerText = sum;
 
             const container = document.getElementById('transaction-sec');
+            
 
-            const p = document.createElement('p');
-            p.innerText = `
-            CashOut ${convertedCashoutAmount} form this ${textCashoutNumber} Account.
+            const div = document.createElement('div');
+            // div.classList.add("bg-gray-200 p-2 m-2")
+            div.innerHTML = `
+            <h1>CashOut Form ${selectBank} </h1>
+            <h3> Amount: ${convertedCashoutAmount} </h3
+            <p> Account No: ${textCashoutNumber} </h3>
+
             `
-            container.appendChild(p)
+            container.appendChild(div);
+            
+            
             
 
         }
